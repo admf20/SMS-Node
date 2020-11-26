@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS</title>
+
+    {{!- BOOSTSWATCH CDN--}}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/lux/bootstrap.min.css">
+ 
+    {{!-TEXT SECURITY CSS--}}
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/noppa/text-security/master/dist/text-security.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+    {{>navigations}}
+    
+    <div class="continer p-4">
+        {{{body}}}
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

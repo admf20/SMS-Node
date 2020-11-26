@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-4">
+        <form action="/send-sms" method="POST" class="card card-body">
+            <div class="form-group">
+                <input type="text" name="message" class="form-control" placeholder="Copia Tu Mensaje" autofocus>
+            </div>
+            <div class="form-group">
+                <input type="tel" name="phone" class="form-control" placeholder="+57 3127125026" autocomplete="off">
+            </div>
+            <button class="btn btn-primary btn-block">
+                Enviar
+            </button>
+        </form>
+    </div>
+    <div class="col-md-8">
+        {{#if message}}
+           <div class="list-group" style="height: 70vh; overflow-y: auto;">
+                {{#each message}} 
+                    <div class="list-group-item list-group-item-info list-group-item-action">
+                        <p>{{Body}}</p>
+                        <span>{{To}}</span>
+                        <span>{{From}}</span>
+                    </div>
+                {{/each}}  
+           </div>
+        {{else}}
+        <p>No Hay Mensajes</p>
+        {{/if}}
+    </div>
+</div>
+ 
